@@ -8,6 +8,20 @@ import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 
 import '@/styles/index.scss' // global css
 
+////////////////////////////////////////////////////////////////////////////////////////
+import '@/styles/ghost.scss' // global css
+import '@/styles/bootstrap.min.scss' // global css
+
+import VueLazyLoad from 'vue-lazyload'
+
+Vue.use(VueLazyLoad, {
+  preLoad: 1,
+  error: require('@/styles/preloader.gif'),
+  loading: require('@/styles/preloader.gif'),
+  attempt: 2
+})
+////////////////////////////////////////////////////////////////////////////////////////
+
 import App from './App'
 import store from './store'
 import router from './router'
